@@ -1,0 +1,88 @@
+body {
+    background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.container {
+    text-align: center;
+    color: #fff;
+}
+
+.message {
+    font-size: 2em;
+    border-right: 3px solid white;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s steps(30, end), blink 0.7s infinite;
+}
+
+.sub {
+    margin-top: 15px;
+    font-size: 1.2em;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background: #ff4d6d;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, left 0.3s, top 0.3s;
+    position: relative;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: #ff2d55;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    0%,
+    100% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: white;
+    }
+}
+
+.heart {
+    position: absolute;
+    top: -20px;
+    color: red;
+    font-size: 24px;
+    animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
